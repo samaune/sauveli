@@ -15,14 +15,19 @@ export class Tab3Page {
 
   }
 
+  async open(){
+    
+  }
+
   async startScan() {
+    
     // Check camera permission
     // This is just a simple example, check out the better checks below
     await BarcodeScanner.checkPermission({ force: true });
   
     // make background of WebView transparent
     // note: if you are using ionic this might not be enough, check below
-    BarcodeScanner.hideBackground();
+    BarcodeScanner.showBackground();
   
     const result = await BarcodeScanner.startScan(); // start scanning and wait for a result
   
@@ -30,6 +35,10 @@ export class Tab3Page {
     if (result.hasContent) {
       alert(result.content); // log the raw scanned content
     }
+  };
+
+  async stopScan() {
+    await BarcodeScanner.stopScan(); 
   };
 
 }

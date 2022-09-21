@@ -12,12 +12,15 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="startScan()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+  <ion-button (click)="startScan()">Start</ion-button>
+  <ion-button (click)="stopScan()">Stop</ion-button>
+  <ion-button (click)="open()">Open</ion-button>
+  <!-- <app-explore-container name="Tab 3 page">
 
-  <app-explore-container name="Tab 3 page">
-    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-      <ion-fab-button (click)="startScan()">
-        <ion-icon name="camera"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-  </app-explore-container>
+  </app-explore-container> -->
 </ion-content>
